@@ -8,7 +8,6 @@ from pygame import font
 
 pygame.init()
 
-#list_k =[pygame.K_LEFT,pygame.K_DOWN,pygame.K_UP,pygame.K_RIGHT]e
 pygame.display.set_caption("События от клавиатуры")
 def text_get(text_quetion):
     while True:
@@ -24,7 +23,7 @@ def text_get(text_quetion):
             text = ''
             place = text_quetion.get_rect(center=(450, 100))
             done = False
-            #гдето здесь ошибка надо протыкать энтер
+
             while not done:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
@@ -51,7 +50,7 @@ def text_get(text_quetion):
                 else:
 
                     break
-            #if text =='':
+
 
             return int(text)
         except Exception:
@@ -153,7 +152,7 @@ if play == 1:
     player_squre_race(x=x,y=y,x1=x1,y1=y1,speed=speed,size=size,time_start=time_start,size2=size2,speed2=speed2)
 elif play == 2:
     def play_without_sight(x=x,y=y,x1=x1,y1=y1,speed=speed,size=size,time_start=time_start,size2=size2,speed2=speed2,amount=amount):
-        true = False
+
         f2 = pygame.font.SysFont('serif', 48)
         text1 = f2.render(f'1', True, (0, 128, 255))
         screen = pygame.display.set_mode((900, 600))
@@ -162,10 +161,9 @@ elif play == 2:
         screen.blit(text1, place)
         pygame.display.update()
         done = False
-        is_blue = True
+
         clock = pygame.time.Clock()
-        count = 0
-        flag =1
+
         pygame.display.set_caption("События от клавиатуры")
         pressed = pygame.key.get_pressed()
         i = 0
