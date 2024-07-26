@@ -492,7 +492,6 @@ class MainClass:
         thread2.start()
         thread1.start()
 
-
 if __name__ == "__main__":
     main_class = MainClass()
     main_class.function_main()
